@@ -8,6 +8,12 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
 
+import dagshub
+dagshub.init(repo_owner='092914rkumar', repo_name='mlflow-dagshub', mlflow=True)
+
+
+mlflow.set_tracking_uri("https://dagshub.com/092914rkumar/mlflow-dagshub.mlflow")
+
 iris = load_iris()
 
 X = iris.data
